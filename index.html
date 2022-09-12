@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Bài 1</h1>
+<input id="c" type="number" placeholder="nhập C">
+<p id="f"></p>
+<button type="button" onclick="Cf()">Tính</button>
+
+<h1>Bài 2</h1>
+<input id="met" type="number" placeholder="nhập m">
+<p id="feet"></p>
+<button type="button" onclick="mf()">Tính</button>
+
+
+<h1>Bài 3</h1>
+<input id="a" type="number" placeholder="nhập a">
+<p id="s"></p>
+<button type="button" onclick="s()">Tính</button>
+
+
+<h1>Bài 4</h1>
+<input id="weidth" type="number" placeholder="nhập rộng">
+<input id="heigth" type="number" placeholder="nhập dài">
+<p id="s1"></p>
+
+<button type="button" onclick="s1()">Tính</button>
+
+
+<h1>Bài 5</h1>
+<input id="weidth1" type="number" placeholder="nhập ke 1">
+<input id="heigth1" type="number" placeholder="nhập ke 2">
+<p id="s2"></p>
+
+<button type="button" onclick="s2()">Tính</button>
+</body>
+<script>
+    function Cf() {
+        let c = +document.getElementById("c").value;
+        let f = document.getElementById("f");
+        f.innerHTML = "Result =" + Number(c * 9 / 5 + 32);
+    }
+
+    function mf() {
+        let met = +document.getElementById("met").value;
+        let feet = document.getElementById("feet");
+        if (met > 0) {
+            feet.innerHTML = "Result =" + met * 3.2808;
+        } else {
+            alert("nhập met lớn hơn 0")
+        }
+    }
+
+    function s() {
+        let a = +document.getElementById("a").value;
+        let s = document.getElementById("s");
+        if (a > 0) {
+            s.innerHTML = "Result =" + a * a;
+        } else {
+            alert("a phải lớn hơn 0")
+        }
+    }
+
+    function s1() {
+        let weight = +document.getElementById("weidth").value;
+        let height = document.getElementById("heigth").value;
+        let s1 = document.getElementById("s1");
+        if (weight > 0 && height > 0) {
+            s1.innerHTML = "Result =" + weight * height;
+        }else {
+            alert("dài và rộng phải lớn hơn 0")
+        }
+    }
+
+    function s2(){
+        let weight1 = +document.getElementById("weidth1").value;
+        let height1 = document.getElementById("heigth1").value;
+        let s2 = document.getElementById("s2");
+        if (weight1 > 0 && height1 > 0) {
+            s2.innerHTML = "Result =" + (weight1 * height1)/2;
+        }else {
+            alert("dài và rộng phải lớn hơn 0")
+        }
+    }
+</script>
+</html>
